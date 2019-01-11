@@ -28,12 +28,26 @@ public class InPlaceSorts {
        return Arr;
     }
 
-    public static int[] InsertionSort(int[] Arr)
-    {
+   public static void insertionSort(int[] Arr)
+   {
+       for(int i = 0; i < Arr.length; i++)
+       {
+          for( int j = i; j > 0; j--)
+          {
+              if(Arr[j-1] > Arr[j])
+              {
+                  swap(Arr, j-1, j);
 
-    }
+              }
+              else
+              {
+                  j = 0;
+              }
+          }
+       }
+   }
 
-    public static int uns(int[] Arr, int )
+
 
     public static int minimum(int [] Arr, int ind)
     {
@@ -48,4 +62,6 @@ public class InPlaceSorts {
         }
         return minlnd;
     }
+
+
 }
