@@ -1,15 +1,22 @@
 package com.company;
 
 public class InPlaceSorts {
-    public static int[] bubbleSort(int[] Arr){
+    public static String[] bubbleSort(String[] Arr){
         for(int count = 0; count < Arr.length; count++) {
             for (int n = 0; n < Arr.length - 1; n++) {
-                if (Arr[n] > Arr[n + 1]) {
+                if (Arr[n].compareTo(Arr[n + 1]) > 1) {
                    swap(Arr, n, n + 1);
                 }
             }
         }
         return Arr;
+    }
+
+    public static void swap(double[] testArr, int x, int y) {
+        double temp;
+        temp = testArr[x];
+        testArr[x] = testArr[y];
+        testArr[y] = temp;
     }
 
     public static void swap(int[] testArr, int x, int y) {
@@ -19,7 +26,15 @@ public class InPlaceSorts {
         testArr[y] = temp;
     }
 
-    public static int[] SelectionSort(int[] Arr)
+    public static void swap(String[] testArr, int x, int y) {
+        String temp;
+        temp = testArr[x];
+        testArr[x] = testArr[y];
+        testArr[y] = temp;
+    }
+
+
+    public static double[] SelectionSort(double[] Arr)
     {
        for( int count = 0; count < Arr.length; count ++)
        {
@@ -49,14 +64,14 @@ public class InPlaceSorts {
 
 
 
-    public static int minimum(int [] Arr, int ind)
+    public static int minimum(double [] Arr, int ind)
     {
         int minlnd = ind;
         for(int i = ind; i < Arr.length; i++)
         {
             if( Arr[i] < Arr[minlnd])
             {
-                swap( Arr, i, minlnd);
+                swap ( Arr, i, minlnd);
                 minlnd = i;
             }
         }
